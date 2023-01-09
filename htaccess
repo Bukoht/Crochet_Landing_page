@@ -1,0 +1,15 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex page24592884.html
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^crochet$ page24592884.html [NC]
+RewriteRule ^crochet/$ page24592884.html [NC]
+
+RewriteRule ^favicon.ico$ https://static.tildacdn.com/tild3763-6461-4362-a436-333438353361/favicon.ico [R=302,L]
+
